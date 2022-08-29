@@ -14,6 +14,7 @@
 FLASK_APP=project
 FLASK_DEBUG=1
 ``
+
 3. Запуcтить код
 
 `flask run`
