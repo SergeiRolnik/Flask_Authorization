@@ -1,0 +1,14 @@
+<!-- templates/profile.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1 class="title"> Управление пользователями</h1>
+    <p>Пользователь: {{ context.current_user }}</p>
+    <p>Роль: {{ context.current_user_role }}</p>
+    <p>Сlient ID: {{ context.client_id }}</p>
+    <p>Пользователи для данного Client ID: {{ context.users }}</p>
+    <br>
+        <button onclick="window.location.href = '{{ url_for('auth.signup', client_id=context.client_id, accounts=context.accounts) }}';">Добавить пользователей</button>
+{% endblock %}
